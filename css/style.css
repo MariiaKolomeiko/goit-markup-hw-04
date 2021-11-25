@@ -24,10 +24,10 @@ ul {
   margin: 0;
   padding: 0;
 }
-/* .section {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
-} */
+}
 
 .list {
   list-style: none;
@@ -52,6 +52,7 @@ ul {
   padding-top: 24px;
   padding-bottom: 25px;
   display: flex;
+  align-items: baseline;
 }
 .logo {
   font-family: Raleway;
@@ -96,19 +97,32 @@ ul {
   display: flex;
   margin-left: auto;
 }
+.header-contact-item {
+  display: flex;
+  width: 161px;
+  height: 16px;
+}
+
 .header-contacts .link {
   color: var(--main-text-color);
 }
 .header-contact-link {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
-
-.header-contacts .link:hover,
-.header-contacts .link:focus {
+.header-contact-link:focus,
+.header-contact-link:hover {
   color: var(--accent-color);
 }
+
+.header-contact-link:hover .header-social-icon,
+.header-contact-link:focus .header-social-icon {
+  fill: var(--accent-color);
+}
+
 .header-contact-item:not(:first-child) {
   margin-left: 30px;
 }
@@ -170,6 +184,22 @@ ul {
 }
 .rules-container {
   display: flex;
+  flex-direction: column;
+}
+
+.rules-gallery-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rules-picture {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  justify-content: center;
+  align-items: center;
 }
 .rules-list {
   display: flex;
@@ -243,6 +273,14 @@ ul {
   margin-left: 30px;
 }
 
+.team-card {
+  background-color: var(--main-white-color);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 .team-text-block {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -253,8 +291,83 @@ ul {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+.team-social-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+}
+.team-social-item + .team-social-item {
+  margin-left: 10px;
 }
 
+.team-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-link:hover .team-pic-icon,
+.team-social-link:focus .team-pic-icon {
+  fill: var(--main-white-color);
+}
+
+.team-pic-icon {
+  fill: #afb1b8;
+}
+
+/* -------------------------------------- Clients Section---------------------------------- */
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-list-item + .client-list-item {
+  margin-left: 30px;
+}
+
+.client-list-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.client-list-link:hover,
+.client-list-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon {
+  fill: var(--accent-color);
+}
+
+.client-list-icon {
+  fill: #afb1b8;
+}
 /* -----------Footer------------- */
 .footer-container {
   display: flex;
@@ -263,6 +376,9 @@ ul {
   padding-bottom: 60px;
   justify-content: center;
   align-items: baseline;
+}
+.footer-main {
+  margin-left: 150px;
 }
 
 .footer-logo-part {
@@ -316,7 +432,7 @@ a[href="https://goo.gl/maps/4tGbcDuvCBDR5g7U7"]
   height: 44px;
   margin-left: 10px;
 }
-.social-link {
+.footer-social-link {
   width: 100%;
   height: 100%;
   background-color: #43444d;
@@ -325,6 +441,12 @@ a[href="https://goo.gl/maps/4tGbcDuvCBDR5g7U7"]
   justify-content: center;
   align-items: center;
 }
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
 .footer-social-icon {
   fill: var(--main-white-color);
 }
@@ -357,6 +479,7 @@ a[href="https://goo.gl/maps/4tGbcDuvCBDR5g7U7"]
   margin-left: 8px;
   padding: 6px 22px;
 }
+
 .filter-button:hover,
 .filter-button:focus {
   color: var(--main-white-color);
